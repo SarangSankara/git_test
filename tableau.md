@@ -12,27 +12,32 @@ Create a Tableau KPI card showcasing
 
 
 <h4>Latest Year</h4>
+
 ``` 
 YEAR([Order Date]) = {MAX(YEAR([Order Date]))}
 ```
 
 <h4>Latest Year Profit</h4>
+
 ```
 { FIXED : SUM(if YEAR([Order Date])={MAX(YEAR([Order Date]))} then [Profit] END)}
 ``` 
 
 <h4>Previous Year Profit</h4>
+
 ```
 { FIXED : SUM(if YEAR([Order Date])={MAX(YEAR([Order Date]))}-1 then [Profit] END)}
 ```
 
 
 <h4>Percentage  Change Profit</h4>
+
 ```
 ([Latest Year Profit] - [Previous Year Profit])/[Previous Year Profit]
 ```
 
 <h4>Percentage Change Profit +ve</h4>
+
 ```
 zn(if [Latest Year Profit]>[Previous Year Profit]
 then
@@ -41,6 +46,7 @@ then
 ```
 
 <h4>Percentage Change Profit -ve</h4>
+
 ```
 zn(if [Latest Year Profit]<[Previous Year Profit]
 then
@@ -49,6 +55,7 @@ then
 ```
 
 <h4>Profit Line</h4>
+
 ```
 [Latest Year Profit]>[Previous Year Profit]
 ```
