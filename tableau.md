@@ -8,6 +8,7 @@ Create a Tableau KPI card showcasing
 
 ![[Pasted image 20241008110141.png]]
 
+![Image](https://i93.servimg.com/u/f93/19/44/64/05/tablel10.png)
 
 
 <h4>Latest Year</h4>
